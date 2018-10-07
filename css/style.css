@@ -1,6 +1,6 @@
 body{
-    background-color: #9b9b9b;
-    font-family: 'EB Garamond', serif; 
+    background-color: lightgray;
+    font-family: 'Monda', sans-serif;
     font-size: 16px;
 }
 
@@ -11,6 +11,7 @@ header, main, footer{
 }
 
 h2{
+    font-family: 'Changa', sans-serif;
     font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
@@ -20,18 +21,17 @@ h2{
     padding: 20px;
 }
 
-
-
 header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
 
-    height: 200px;
+    height: 250px;
     background: black;
     padding-left: 50px;
 
     color: #ffffff;
+    background-color: #607d8b;
 }
 
 figure{
@@ -40,11 +40,16 @@ figure{
     align-items: center;
 }
 
+figure img{
+    border-radius: 50%;
+    border:2px solid #bb946c;
+
+}
 
 main{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 250px;
+    grid-auto-rows: 270px;
     grid-column-gap: 10px;
     grid-row-gap: 10px; 
 
@@ -73,6 +78,10 @@ main ul{
     text-align: justify;
 }
 
+.about p{
+    color: #6b6866;;
+}
+
 .education{
     display: grid;
 
@@ -86,6 +95,129 @@ main ul{
 
     grid-column-start: 1; 
     grid-column-end: span 2; 
+}
+
+.skills ul{
+    margin-left: 70px;
+}
+
+.skills li{
+    margin-top: 20px;
+    position: relative;
+}
+
+.skills li::before{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+
+    position: absolute;
+    left: -40px;
+    top: -7px;
+
+    border: 1px solid #bb946c;
+    border-radius: 50%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+}
+
+.skills li::after{
+    content: "";
+    display: block;
+    width: 150px;
+    height: 20px;
+
+    position: absolute;
+    top: -3px;
+    right: 70px;
+
+    border: 1px solid #bb946c;
+    border-radius: 10px;
+}
+
+
+
+.skills__hard li:nth-child(1)::before{
+    background-image: url("../img/skills/html5.png");
+}
+
+.skills__hard li:nth-child(2)::before{
+    background-image: url("../img/skills/css3.png");
+}
+
+.skills__hard li:nth-child(3)::before{
+    background-image: url("../img/skills/js.png");
+}
+
+.skills__hard li:nth-child(4)::before{
+    background-image: url("../img/skills/sql.png");
+}
+
+.skills__hard li:nth-child(5)::before{
+    background-image: url("../img/skills/java.png");
+}
+
+.skills__hard li:nth-child(1)::after{
+    background-image: linear-gradient(90deg, #607d8b 0%, #607d8b 80%, #fff 80%);
+}
+
+.skills__hard li:nth-child(2)::after{
+    background-image: linear-gradient(90deg, #607d8b 0%, #607d8b 70%, #fff 70%);
+}
+
+.skills__hard li:nth-child(3)::after{
+    background-image: linear-gradient(90deg, #607d8b 0%, #607d8b 60%, #fff 60%);
+}
+
+.skills__hard li:nth-child(4)::after{
+    background-image: linear-gradient(90deg, #607d8b 0%, #607d8b 30%, #fff 30%);
+}
+
+.skills__hard li:nth-child(5)::after{
+    background-image: linear-gradient(90deg, #607d8b 0%, #607d8b 40%, #fff 40%);
+}
+
+.skills__soft li:nth-child(1)::before{
+    background-image: url("../img/skills/responsible.png");
+}
+
+.skills__soft li:nth-child(2)::before{
+    background-image: url("../img/skills/creative.png");
+}
+
+.skills__soft li:nth-child(3)::before{
+    background-image: url("../img/skills/resourceful.png");
+}
+
+.skills__soft li:nth-child(4)::before{
+    background-image: url("../img/skills/friendly.png");
+}
+
+.skills__soft li:nth-child(5)::before{
+    background-image: url("../img/skills/tactful.png");
+}
+
+.skills__soft li:nth-child(1)::after{
+    background-image: linear-gradient(90deg, #607d8b 0%, #607d8b 100%);
+}
+
+.skills__soft li:nth-child(2)::after{
+    background-image: linear-gradient(90deg, #607d8b 0%, #607d8b 80%, #fff 80%);
+}
+
+.skills__soft li:nth-child(3)::after{
+    background-image: linear-gradient(90deg, #607d8b 0%, #607d8b 95%, #fff 95%);
+}
+
+.skills__soft li:nth-child(4)::after{
+    background-image: linear-gradient(90deg, #607d8b 0%, #607d8b 90%, #fff 90%);
+}
+
+.skills__soft li:nth-child(5)::after{
+    background-image: linear-gradient(90deg, #607d8b 0%, #607d8b 100%);
 }
 
 .interests{
@@ -135,6 +267,27 @@ main ul{
 }
 
 footer{
-    height: 50px;
-    background-color: lightgray;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+
+    height: 60px;
+    background-color: #607d8b;
+}
+
+.socials .socials__item{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.socials__item img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.socials__item img:hover{
+    box-shadow: 0 0 5px 1px black;
 }
