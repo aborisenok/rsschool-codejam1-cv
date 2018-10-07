@@ -45,11 +45,11 @@ header {
     background-color: #607d8b;
 }
 
-figure{
+.avatar{
     margin-left: 30px;
 }
 
-figure img{
+.avatar img{
     border-radius: 50%;
     border:2px solid #bb946c;
 
