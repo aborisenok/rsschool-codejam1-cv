@@ -1,0 +1,347 @@
+body {
+  font: 400 16px/18px 'Monda', Arial, sans-serif;
+  background-color: lightgray;
+}
+
+header, main, footer {
+  box-sizing: border-box;  
+  width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  padding-left: 20px; 
+
+  font: 700 30px/50px 'Changa', 'Arial', sans-serif;
+  text-transform: uppercase;
+
+  text-align: left;
+}
+
+h1 span{
+  display: block;
+}
+
+h2 {
+  display: inline-block;
+  padding: 20px;
+
+  font: 700 20px/20px 'Changa', 'Arial', sans-serif;
+  text-transform: uppercase;
+
+  border-bottom: 2px solid #d0cfd0;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 250px;
+    
+  color: #ffffff;
+  background-color: #607d8b;
+}
+
+.avatar {
+  margin-left: 30px;
+}
+
+.avatar img {
+  border-radius: 50%;
+  border:2px solid #bb946c;
+}
+
+.contacts {
+  margin-right: 20px;
+  text-align: left;
+}
+
+.contacts li {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.contacts li::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+
+  position: absolute;
+  left: -40px;
+  top: -7px;
+
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+
+  background: center/70% no-repeat;
+}
+
+.contacts .number::before {
+  background-image: url("../img/contacts/tel.png");
+}
+
+.contacts .mail::before {
+  background-image: url("../img/contacts/email.png");
+}
+
+.contacts .skype::before {
+  background-image: url("../img/contacts/skype.png");
+}
+
+.contacts .location::before {
+  background-image: url("../img/contacts/location.png");
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 280px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px; 
+  padding: 10px;
+
+  background-color: #ffffff;
+}
+
+main section {
+  border: 1px solid #d0cfd0;
+}
+
+main p,
+main ul {
+  margin: 20px;
+}
+
+.about {
+  grid-area: 1 / 1 / 2 / 2;
+
+  text-align: justify;
+}
+
+.about p {
+  color: #6b6866;
+}
+
+.education {
+  display: grid;
+
+  grid-row: 1 / 3; 
+}
+
+.styding ul {
+  margin-bottom:  50px;
+}
+
+.education li, 
+.languages li {
+  margin-bottom: 10px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.light {
+  font-size: 0.9em;
+  color: #607d8b;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  grid-column: 1 / span 2; 
+}
+
+.skills ul {
+  margin-left: 70px;
+}
+
+.skills li {
+  margin-top: 20px;
+  position: relative;
+}
+
+.skills li::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+
+  position: absolute;
+  left: -40px;
+  top: -7px;
+
+  border: 1px solid #bb946c;
+  border-radius: 50%;
+  background: center/70% no-repeat;
+}
+
+.skills li::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 20px;
+
+  position: absolute;
+  top: -3px;
+  right: 70px;
+
+  border: 1px solid #bb946c;
+  border-radius: 10px;
+}
+
+.skills .skills__html::before {
+  background-image: url("../img/skills/html5.png");
+}
+
+.skills .skills__css::before {
+  background-image: url("../img/skills/css3.png");
+}
+
+.skills .skills__js::before {
+  background-image: url("../img/skills/js.png");
+}
+
+.skills .skills__sql::before {
+  background-image: url("../img/skills/sql.png");
+}
+
+.skills .skills__java::before {
+  background-image: url("../img/skills/java.png");
+}
+
+.skills .skills__html::after {
+  background-image: linear-gradient(90deg, #607d8b 0%, #607d8b 80%, #fff 80%);
+}
+
+.skills .skills__css::after {
+  background-image: linear-gradient(90deg, #607d8b 0%, #607d8b 70%, #fff 70%);
+}
+
+.skills .skills__js::after {
+  background-image: linear-gradient(90deg, #607d8b 0%, #607d8b 60%, #fff 60%);
+}
+
+.skills .skills__sql::after {
+  background-image: linear-gradient(90deg, #607d8b 0%, #607d8b 30%, #fff 30%);
+}
+
+.skills .skills__java::after {
+  background-image: linear-gradient(90deg, #607d8b 0%, #607d8b 40%, #fff 40%);
+}
+ 
+.skills .skills__responsible::before {
+  background-image: url("../img/skills/responsible.png");
+}
+
+.skills .skills__creative::before {
+  background-image: url("../img/skills/creative.png");
+}
+
+.skills .skills__resourceful::before {
+  background-image: url("../img/skills/resourceful.png");
+}
+
+.skills .skills__friendly::before {
+  background-image: url("../img/skills/friendly.png");
+}
+
+.skills .skills__tactful::before {
+  background-image: url("../img/skills/tactful.png");
+}
+
+.skills .skills__responsible::after {
+  background-image: linear-gradient(90deg, #607d8b 0%, #607d8b 100%);
+}
+ 
+.skills .skills__creative::after {
+  background-image: linear-gradient(90deg, #607d8b 0%, #607d8b 80%, #fff 80%);
+}
+
+.skills .skills__resourceful::after {
+  background-image: linear-gradient(90deg, #607d8b 0%, #607d8b 95%, #fff 95%);
+}
+
+.skills .skills__friendly::after {
+  background-image: linear-gradient(90deg, #607d8b 0%, #607d8b 90%, #fff 90%);
+}
+
+.skills .skills__tactful::after {
+  background-image: linear-gradient(90deg, #607d8b 0%, #607d8b 100%);
+}
+
+.interests {
+  grid-column: 1 / span 2; 
+}
+
+.interests ul {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.interests li {
+  height: 150px;
+  width: 150px;
+  box-sizing: border-box;
+  padding-top: 100px;
+
+  border: 1px solid #bb946c;
+  border-radius: 50%;
+  background: center 20px/50% no-repeat;
+
+  text-align: center;
+}
+
+.interests .coffee {
+  background-image: url(../img/hobbies/coffee.png);
+}
+
+.interests .music {
+  background-image: url(../img/hobbies/music.png);
+}
+
+.interests .sport {
+  background-image: url(../img/hobbies/sport.png);
+}
+
+.interests .traveling {
+  background-image: url(../img/hobbies/traveling.png);
+}
+
+.interests .codding {
+  background-image: url(../img/hobbies/codding.png);
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+
+  height: 60px;
+  background-color: #607d8b;
+
+  padding-left: 20px;
+}
+
+
+.socials .socials__item {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.socials__item img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.socials__item img:hover {
+  box-shadow: 0 0 5px 1px black;
+}
